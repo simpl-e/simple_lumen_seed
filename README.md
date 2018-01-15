@@ -12,6 +12,9 @@ https://github.com/tymondesigns/jwt-auth/wiki/Installation
 ### como llamar a la api:
 add 'public/controller/method' after url
 
+### Para testear la api:
+/api_test.html
+
 ---
 
 Este proyecto está basado en:
