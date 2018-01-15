@@ -2547,7 +2547,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=7.0 <=7.0.23"
+        "php": ">=7.0"
     },
     "platform-dev": []
 }
