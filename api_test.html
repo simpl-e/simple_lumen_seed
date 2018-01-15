@@ -1,0 +1,49 @@
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<div id="login" style="display: none">
+    <input id="user" placeholder="email" />
+    <input id="pass" type="password" placeholder="password" />
+    <button>login</button>
+</div>
+
+<button id="logout">logout</button>
+
+<script>
+
+    //acceder datos del perfil
+    $.post("public/user/usuario", function (res) {
+        console.log(res);
+        $("<div>").text("token login succeed: " + JSON.stringify(res)).prependTo("body");
+
+    }).fail(function (res) {
+        console.log(res);
+        //si no tiene permisos, mostrar login
+        if ("401" == res.status) {
+            $("#login").show();
+            $("#logout").hide();
+        }
+    });
+
+    //login api post
+    $("#login").click(function () {
+        $.post("public/login", {
+            User: $("#user").val(),
+            Pass: $("#pass").val()
+        }, function (data) {
+            console.log(data);
+            if (!data) {
+                location.reload();
+            }
+        });
+    });
+
+    //logout api post
+    $("#logout").click(function () {
+        $.post("public/logout", function (data) {
+            console.log(data);
+            location.reload();
+        });
+    });
+
+</script>
