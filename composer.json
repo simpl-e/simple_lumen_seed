@@ -1,6 +1,6 @@
 {
     "require": {
-        "php": ">=7.0 <=7.0.23",
+        "php": ">=7.0",
         "laravel/lumen-framework": "5.5.*",
         "vlucas/phpdotenv": "~2.2",
         "tymon/jwt-auth": "^1.0@dev"
