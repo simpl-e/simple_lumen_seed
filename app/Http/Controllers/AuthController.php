@@ -8,16 +8,16 @@ use Laravel\Lumen\Routing\Controller;
 use Illuminate\Http\Request;
 use JWTAuth;
 use Tymon\JWTAuth\Exceptions\JWTException;
-use App\Usuario;
+use App\User;
 
 class AuthController extends Controller {
 
     public function login(Request $request) {
-        $User = $request->input('User');
-        $Pass = $request->input('Pass');
-        $password = htmlentities(sha1(md5($Pass)));
+        $userRequest = $request->input('email');
+        $passRequest = $request->input('password');
+        $password = htmlentities(sha1(md5($passRequest)));
 
-        $user = Usuario::where(["User" => $User, "Pass" => $password])->first();
+        $user = User::where(["email" => $userRequest, "password" => $password])->first();
         if (empty($user)) {
             return;
         }

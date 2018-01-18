@@ -9,23 +9,23 @@ use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 use Tymon\JWTAuth\Contracts\JWTSubject;
 
-class Usuario extends Model implements JWTSubject, AuthenticatableContract, AuthorizableContract {
+class User extends Model implements JWTSubject, AuthenticatableContract, AuthorizableContract {
 
     use Authenticatable,
         Authorizable;
 
     /* tabla e id para uso de Eloquent */
-    protected $table = "Usuarios";
-    protected $primaryKey = "Id";
+    protected $table = "users";
+    protected $primaryKey = "id";
     
     /* cols editables */
     protected $fillable = [
-        "Nombre", "User", "Pass", "Id_pais", "Rol", "Pass", "Intentos"
+        "name", "email", "password"
     ];
     
     /* cols ocultas por defecto */
     protected $hidden = [
-        'Pass', 'Intentos'
+        'password'
     ];
 
     /**

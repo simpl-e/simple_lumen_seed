@@ -23,6 +23,10 @@ add 'public/controller/method' after url
 ### Para testear la api:
 /api_test.html
 
+### Para añadir clases de uso común
+"Create a 'Libraries' folder inside your app folder"
+https://stackoverflow.com/a/17091089/2075591
+
 ---
 
 Este proyecto está basado en:

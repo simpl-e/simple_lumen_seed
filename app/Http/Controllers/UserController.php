@@ -4,16 +4,16 @@ namespace App\Http\Controllers;
 
 use Laravel\Lumen\Routing\Controller;
 use Illuminate\Http\Request;
-use App\Usuario;
+use App\User;
 
 class UserController extends Controller {
 
-    public function usuario(Request $request) {
+    public function user(Request $request) {
         //acceder datos del token (sesión)
-        $usuario = $request->user();
+        $user = $request->user();
         
         //devolver del ORM Model de Eloquent
-        return Usuario::where("Id", $usuario->Id)->first();
+        return User::where("id", $user->Id)->first();
     }
 
 }
