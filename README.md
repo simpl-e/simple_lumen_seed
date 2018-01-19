@@ -40,7 +40,7 @@ https://stackoverflow.com/a/17091089/2075591
 
 ---
 
-Este proyecto está basado en:
-https://github.com/simpl-e/lumen_lite.git
+Seed:
+https://github.com/simpl-e/simple_lumen_seed.git
 
 Para migrarlo a cualquier versión de laravel o lumen copiar los archivos excepto /public/* y revisar bootstrap/app.php
