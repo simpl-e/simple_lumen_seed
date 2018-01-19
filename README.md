@@ -1,6 +1,17 @@
 
-### Instalación de paquetes laravel/lumen
-composer install
+## Instalación
+
+### Composer
+cd /tmp
+curl -sS https://getcomposer.org/installer | php
+mv composer.phar /usr/local/bin/composer
+**LOGIN AGAIN**
+(https://www.epictrim.com/ideas/install-composer-on-centos/)
+
+### Paquetes vendor
+sudo composer install
+
+---
 
 ### Estructura
 from https://www.merixstudio.com/blog/laravel-5-tutorial/
